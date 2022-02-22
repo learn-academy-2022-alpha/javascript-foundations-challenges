@@ -12,34 +12,52 @@
 // console.log(mult3(testArr1))
 
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
-var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+// var testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
 
-const oddNumbers= (array) => {
-let newArray= []
+// const oddNumbers= (array) => {
+// let newArray= []
 
-  for (let i=0; i<array.length; i++) {
-    if (array[i] % 2 !==0) {
-      newArray.push(array[i])
-    }
-  }
-return newArray
-}
-console.log(oddNumbers(testArr2))
-
-
+//   for (let i=0; i<array.length; i++) {
+//     if (array[i] % 2 !==0) {
+//       newArray.push(array[i])
+//     }
+//   }
+// return newArray
+// }
+// console.log(oddNumbers(testArr2))
 // // --> [-7, 3, 5, 13]
+
+
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-// var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
+var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
+const lettersOnly = (array) => {
+  let newArr1 = []
+  for(let i = 0; i < array.length; i++) {
+   if(typeof array[i] === "string") {
+    newArr1.push(array[i])
+   }
+  }
+   return newArr1
+  }
+console.log(lettersOnly(comboArr)) 
 // // --> "nicework"
+
+
 // Create a function that takes in an array of numbers and returns the sum.
-// var addThese1 = [1, 2, 3, 4]
+var addThese1 = [1, 2, 3, 4]
+
+
 // // --> 10
 //
 // var addThese2 = []
 // // --> 0
+
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
 // var indexHighestNumber = [1, 4, 2, 3]
 // // --> 1
+
+
 // STRETCH Challenges
 //
 // Create a function that takes in two arrays and returns one array with no duplicate values.
@@ -74,4 +92,3 @@ console.log(oddNumbers(testArr2))
 // As a user, if I guess the "answer" correctly I am notified that I won.
 // As a user, I can continue to guess the "answer" until I am correct.
 // STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.
-//
