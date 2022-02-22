@@ -71,17 +71,16 @@ console.log(addItUp(addThese2))
 
 
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-var indexHighestNumber = [1, 4, 2, 3]
+var indexHighestNumber = [1, 4, 2, 10]
 // output: --> 1
+
+const biggerNum = (arr) => {
   var largest = []
-
-const biggerNum = (numnum) => {
-
-  for (let i=0; i < numnum.length; i++) {
-    if (numnum > largest) {
-       largest[i] = numnum[i]
+  for (let i=0; i < arr.length; i++) {
+    if (largest < arr[i]) {
+       largest = arr[i]
     }
-    return largest[i]
+    return largest
   }
 }
 
