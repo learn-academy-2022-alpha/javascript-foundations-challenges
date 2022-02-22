@@ -55,30 +55,61 @@ var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", fals
 // if so add to our result of string
 // return that result
 
-const message = (array) => {
-    let result = ""
-    for (let i = 0; i < array.length; i++) {
-        const data = array[i]
-        if (typeof data === "string") {
-            result += data
-        }
+// const message = (array) => {
+//     let result = ""
+//     for (let i = 0; i < array.length; i++) {
+//         const data = array[i]
+//         if (typeof data === "string") {
+//             result += data
+//         }
+//     }
+//     return result
+// }
+//
+// console.log(message(comboArr))
+
+// // Create a function that takes in an array of numbers and returns the sum.
+// var addThese1 = [1, 2, 3, 4]
+// var addThese2 = []
+// // // --> 0
+// // --> 10
+//psuedo code:
+
+// create a function addNums that will take an array
+// create a variable for result as the total sum of the numbers
+// create a loop in the function to iterate through the arrays
+// add the current number to the result
+// return the result
+//
+// const addNums = array => {
+//   let totalSum = 0
+//   for (let i=0; i < array.length; i++){
+//     totalSum += array[i]
+//   }
+//   return totalSum
+// }
+//
+// console.log(addNums(addThese2))
+
+// Create a function that takes in an array of numbers and returns the index of the largest number.
+ var indexHighestNumber = [1, 4, 2, 3]
+// // --> 1
+
+const highestIndex = array => {
+  let highestNumber = array[0]
+  let index = 0
+  for (let i=0; i < array.length; i++){
+    if (highestNumber < array[i]){
+      highestNumber = array[i]
+      index = i
     }
-    return result
+  }
+  return index
 }
 
-console.log(message(comboArr))
+console.log(highestIndex(indexHighestNumber))
 
-// Create a function that takes in an array of numbers and returns the sum.
-// var addThese1 = [1, 2, 3, 4]
-// // --> 10
-
-// var addThese2 = []
-// // --> 0
-// Create a function that takes in an array of numbers and returns the index of the largest number.
-// var indexHighestNumber = [1, 4, 2, 3]
-// // --> 1
 // STRETCH Challenges
-
 // Create a function that takes in two arrays and returns one array with no duplicate values.
 // var arr1 = [3, 7, 10, 5, 4, 3, 3]
 // var arr2 = [7, 8, 2, 3, 1, 5, 4]
