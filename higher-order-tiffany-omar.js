@@ -12,15 +12,26 @@
 
 
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
-var arr2 = [2, 7, 3, 5, 8, 10, 13]
-// --> [7, 3, 5, 13]
-const oddOnly = (array) => {
-    return array.filter(value => value % 2 !== 0)
-}
-console.log(oddOnly(arr2))
+// var arr2 = [2, 7, 3, 5, 8, 10, 13]
+// // --> [7, 3, 5, 13]
+// const oddOnly = (array) => {
+//     return array.filter(value => value % 2 !== 0)
+// }
+// console.log(oddOnly(arr2))
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use typeof method
-// var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+
+
+const onlyLetters= (array) => {
+  return array.filter(value => {
+    return typeof value=== "string" && typeof value !== "number"
+  })
+}
+
+console.log(onlyLetters(comboArr))
+
+
 // // --> "nicework"
 
 
