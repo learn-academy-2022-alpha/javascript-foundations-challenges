@@ -111,9 +111,36 @@ console.log(highestIndex(indexHighestNumber))
 
 // STRETCH Challenges
 // Create a function that takes in two arrays and returns one array with no duplicate values.
-// var arr1 = [3, 7, 10, 5, 4, 3, 3]
-// var arr2 = [7, 8, 2, 3, 1, 5, 4]
+
+//pseudo code:
+//Create a function named combiner
+//Create an empty array named result
+//Create another array called combinedArray
+//combiner takes two arrays and combines them into combinedArray
+//Itterates through array for duplicates
+//If duplicate, skip
+//If not, add to result
+//return result
+
+const combiner = (arrayOne, arrayTwo) => {
+   let combinedArray = arrayOne.concat(arrayTwo)
+   let result = []
+   for (let i = 0; i < combinedArray.length; i++){
+     if (!result.includes(combinedArray[i])){
+       result.push(combinedArray[i])
+      }
+  }
+   return result
+}
+
+ var arr1 = [3, 7, 10, 5, 4, 3, 3]
+ var arr2 = [7, 8, 2, 3, 1, 5, 4]
+
+ console.log(combiner(arr1,arr2))
+
+
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
+
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
 // var arrayLength = 6
 // var arrayValue = 0
