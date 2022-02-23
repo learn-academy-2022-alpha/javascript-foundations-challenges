@@ -122,29 +122,48 @@ console.log(highestIndex(indexHighestNumber))
 //If not, add to result
 //return result
 
-const combiner = (arrayOne, arrayTwo) => {
-   let combinedArray = arrayOne.concat(arrayTwo)
-   let result = []
-   for (let i = 0; i < combinedArray.length; i++){
-     if (!result.includes(combinedArray[i])){
-       result.push(combinedArray[i])
-      }
-  }
-   return result
-}
+// const combiner = (arrayOne, arrayTwo) => {
+//    let combinedArray = arrayOne.concat(arrayTwo)
+//    let result = []
+//    for (let i = 0; i < combinedArray.length; i++){
+//      if (!result.includes(combinedArray[i])){
+//        result.push(combinedArray[i])
+//       }
+//   }
+//    return result
+// }
 
- var arr1 = [3, 7, 10, 5, 4, 3, 3]
- var arr2 = [7, 8, 2, 3, 1, 5, 4]
+//  var arr1 = [3, 7, 10, 5, 4, 3, 3]
+//  var arr2 = [7, 8, 2, 3, 1, 5, 4]
 
- console.log(combiner(arr1,arr2))
+//  console.log(combiner(arr1,arr2))
 
 
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
 
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
-// var arrayLength = 6
-// var arrayValue = 0
+var arrayLength = 6
+var arrayValue = 0
 // // --> [0, 0, 0, 0, 0, 0]
+
+// Pseudo code:
+// create a funciton named buildArray
+// create an empty array named result
+// buildArray will take two numbers (length, value)
+// iterate over loop for length
+// push value into result
+// return result
+
+// const buildArray = (length, value) => {
+//   let result = []
+//   for (let i = 0; i < length; i++) {
+//     result.push(value)
+//   }
+//   return result
+// }
+
+// console.log(buildArray(arrayLength, arrayValue))
+
 
 // var arrayLength = 4
 // var arrayValue = 11
