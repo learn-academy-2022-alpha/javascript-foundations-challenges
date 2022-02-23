@@ -44,7 +44,7 @@
 // console.log(oddNumbers(testArr2))
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
-var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
+// var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
 // // --> "nicework"
 
 // Pseudo code
@@ -92,22 +92,22 @@ var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", fals
 // console.log(addNums(addThese2))
 
 // Create a function that takes in an array of numbers and returns the index of the largest number.
- var indexHighestNumber = [1, 4, 2, 3]
-// // --> 1
+//  var indexHighestNumber = [1, 4, 2, 3]
+// // // --> 1
 
-const highestIndex = array => {
-  let highestNumber = array[0]
-  let index = 0
-  for (let i=0; i < array.length; i++){
-    if (highestNumber < array[i]){
-      highestNumber = array[i]
-      index = i
-    }
-  }
-  return index
-}
+// const highestIndex = array => {
+//   let highestNumber = array[0]
+//   let index = 0
+//   for (let i=0; i < array.length; i++){
+//     if (highestNumber < array[i]){
+//       highestNumber = array[i]
+//       index = i
+//     }
+//   }
+//   return index
+// }
 
-console.log(highestIndex(indexHighestNumber))
+// console.log(highestIndex(indexHighestNumber))
 
 // STRETCH Challenges
 // Create a function that takes in two arrays and returns one array with no duplicate values.
@@ -142,9 +142,12 @@ console.log(highestIndex(indexHighestNumber))
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
 
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
-var arrayLength = 6
-var arrayValue = 0
+// var arrayLength = 6
+// var arrayValue = 0
 // // --> [0, 0, 0, 0, 0, 0]
+// var arrayLength = 4
+// var arrayValue = 11
+// // --> [11, 11, 11, 11]
 
 // Pseudo code:
 // create a funciton named buildArray
@@ -165,9 +168,6 @@ var arrayValue = 0
 // console.log(buildArray(arrayLength, arrayValue))
 
 
-// var arrayLength = 4
-// var arrayValue = 11
-// // --> [11, 11, 11, 11]
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
 // var addUp1 = 4
 // // 1 + 2 + 3 + 4 = 10
@@ -179,3 +179,85 @@ var arrayValue = 0
 
 // var addUp3 = 600
 // // --> 180300
+
+
+// Pseudo code:
+// create a function named addNums
+// addNums will take a parameter of a number named num
+// create an empty array named arr
+// we can make a loop starting at 1 and go to num, pushing each number to arr
+// create a variable to get our sum named sum
+// we can then add each value from arr to sum
+// return sum
+
+// const addNums = num => {
+//   let arr = []
+//   for (let i = 1; i <= num; i++) {
+//     arr.push(i)
+//   }
+
+//   let sum = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i]
+//   }
+
+//   return sum
+// }
+
+// console.log(addNums(addUp1))
+// console.log(addNums(addUp2))
+// console.log(addNums(addUp3))
+
+
+// EPIC Challenges
+
+// Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
+// Create an HTML page and link your JavaScript file. More info here.
+// As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive).
+// As a user, I can see if my guess is too high or too low.
+// As a user, if I guess the "answer" correctly I am notified that I won.
+// As a user, I can continue to guess the "answer" until I am correct.
+// STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.
+
+let randomNum = Math.floor(Math.random() * 100) + 1
+let triesLeft = 7
+
+const highLow = num => {
+  if (num === randomNum) {
+    return "Winner"
+  }
+  else if (num < randomNum) {
+    return 'Too low, try again...'
+  }
+  else {
+    return 'Too high, try again...'
+  }
+}
+
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault()
+  const guess = parseInt(e.target.guess.value)
+
+  if (isNaN(guess)) {
+    return document.getElementById("notification").innerHTML = "Please choose a number"
+  }
+
+  if (triesLeft > 0) {
+    const checkGuess = highLow(guess)
+    if (checkGuess === "Winner") {
+      alert(`The number was ${randomNum}. You Win!!!`)
+      return location.reload()
+    }
+    else {
+      document.getElementById("notification").innerHTML = checkGuess
+      triesLeft--
+    }
+  }
+
+  if (triesLeft === 0) {
+    alert(`You lost, the correct number was ${randomNum}.`)
+    location.reload()
+  }
+
+  document.getElementById("num-tries").innerHTML = `${triesLeft} tries left`
+})
