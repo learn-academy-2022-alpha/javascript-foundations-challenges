@@ -35,7 +35,7 @@ var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 
 // const filter1 = (Array) => {
 //     let cream = Array.filter(value =>{
-//         return typeof value === "string" && value === "number" 
+//         return typeof value === "string" && value === "number"
 //     }
 //     })
 //     return filter1.map(value)
@@ -43,9 +43,11 @@ var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 
 const filter1 = (array) => {
     let noNumb = array.filter(value =>{
-     
-        return typeof value  === "string" || typeof value === "number" || value === true
-    }) 
+       let actualString = typeof value === "string" && value !== " "
+       let actualNumber = value > 0 && typeof value === "number"
+       let actualBoolean = typeof value === "boolean" && value === true
+        return actualString || actualNumber || actualBoolean
+    })
     return noNumb.map(value => value)
 }
 console.log(filter1(filterArrayValues))
@@ -55,26 +57,47 @@ console.log(filter1(filterArrayValues))
 
 // Create a function that takes in a string and returns a new string with all the vowels removed.
 
-// var str = "javascript is awesome"
+var str = "javascript is awesome"
 
+const noVowel = (string) => {
+  let splitArray = string.split("")
+  let stringWithNoVowels = splitArray.filter(value =>{
+    for(let i = 0; i<splitArray.length; i++){
+      if(splitArray[i] === "a"){
+        return splitArray.splice(i,1)
+      } else if(splitArray[i] === "e"){
+        return splitArray.splice(i,1)
+      } else if(splitArray[i] === "i"){
+        return splitArray.splice(i,1)
+      } else if(splitArray[i] === "o"){
+        return splitArray.splice(i,1)
+      } else if(splitArray[i] === "u"){
+        return splitArray.splice(i,1)
+      }
+      }
+      return splitArray
+  })
+  return stringWithNoVowels.map(value => value)
+}
+console.log(noVowel(str).join(""))
 
 // --> "jvscrpt s wsm"
 
 // Create a function that takes in two arrays and returns one array with no duplicate values.
 
 
-// var arr1 = [3, 7, 10, 5, 4, 3, 3]
-// var arr2 = [7, 8, 2, 3, 1, 5, 4]
+var arr1 = [3, 7, 10, 5, 4, 3, 3]
+var arr2 = [7, 8, 2, 3, 1, 5, 4]
 
-// const combiner = (array1, array2) => {
-//     let combinedArray = arrayOne.concat(array2)
-//     let result = []
-//     for (let i=0; i< combinedArray.length; i++){
-//         if (!result.includes(combinedArray[i])){
-//             result.push(combinedArray[i])
-//         }
-//     }
-//     return result
-// }
-// console.log(combiner(arr1,arr2))
-// // --> [3, 7, 10, 5, 4, 8, 2, 1]
+const combiner = (array1, array2) => {
+    let combinedArray = array1.concat(array2)
+    let result = []
+    for (let i=0; i< combinedArray.length; i++){
+        if (!result.includes(combinedArray[i])){
+            result.push(combinedArray[i])
+        }
+    }
+    return result
+}
+console.log(combiner(arr1,arr2))
+// --> [3, 7, 10, 5, 4, 8, 2, 1]
