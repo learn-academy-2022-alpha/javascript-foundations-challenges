@@ -85,6 +85,9 @@ var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 //Create a function named filterGarbage
 //filterGarbage takes an array
 //Itterates through the data of the array
+// We can check if a value and that it's not an empty string
+// If so add the value
+// Now we can return the result
 
 const filterGarbage = array => {
   return array.filter(value => {
@@ -113,9 +116,57 @@ console.log(filterGarbage(filterArrayValues))
 // STRETCH Challenges
 //
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// var str = "javascript is awesome"
+var str = "javascript is awesome"
 // // --> "jvscrpt s wsm"
+
+// Psuedo code
+// create a function named noVowels
+// noVowels will take an array
+// create an empty string named result
+// create an array of vowels to check
+// split string into an array
+// iterate through the array
+// check if not a vowel and add to result
+// return result
+
+const noVowels = array => {
+  let result = ''
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+
+  array.split("").forEach(value => {
+    const vowelsIdx = vowels.indexOf(value)
+    if (vowelsIdx === -1) {
+      result += value
+    }
+  })
+  return result
+}
+
+console.log(noVowels(str))
+
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
-// var arr1 = [3, 7, 10, 5, 4, 3]
-// var arr2 = [7, 8, 2, 1, 5, 4]
+var arr1 = [3, 7, 10, 5, 4, 3]
+var arr2 = [7, 8, 2, 1, 5, 4]
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
+
+// Psuedo Code
+// create a function named noDuplicates
+// noDuplicates will take two arrays
+// create an empty array named result
+// combine the two arrays into one and loop over
+// check if result array contains the current value
+// if so skip
+// if not add
+// return result
+
+const noDuplicates = (array1, array2) => {
+  let result = []
+  array1.concat(array2).forEach(value => {
+    if (!result.includes(value)) {
+      result.push(value)
+    }
+  })
+  return result
+}
+
+console.log(noDuplicates(arr1, arr2))
