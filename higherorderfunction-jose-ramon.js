@@ -91,11 +91,15 @@ var str = "javascript is awesome"
 //PSEUDO CODE
 //create a function
 // must take in a value as parameter
-// use .filter to filter out the vowels
-//return string without vowels
+// use .split method to separate the string and turn into an array
+// declare new variable
+// use .filter to filter out the vowels of a,e,i,o,u
+//return new string without vowels
+// use .join to turn into a string
+// log function name w/ the given variable as the argument
 
-const noVowels = (array) => {
-  let arr = array.split("")
+const noVowels = (strings) => {
+  let arr = strings.split("")
   var string = arr.filter(value => (
     value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
   ))
