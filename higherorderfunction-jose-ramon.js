@@ -107,7 +107,7 @@ const noVowels = (strings) => {
 }
 console.log(noVowels(str))
 
-
+ 
 
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 // var arr1 = [3, 7, 10, 5, 4, 3]
