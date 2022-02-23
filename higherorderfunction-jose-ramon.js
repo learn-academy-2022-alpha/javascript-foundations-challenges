@@ -15,14 +15,14 @@
 var arr1 = [3, 9, 15, 4, 10]
 // // --> [30, 90, 150, 40, 100]
 
-let multiplyBy10 = arr => {
+const multiply = arr => {
   let multBy10 = arr.map((value) => {
     return value * 10
   })
   return multBy10
 }
 
-console.log(multiplyBy10(arr1))
+console.log(multiply(arr1))
 
 
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
@@ -35,7 +35,7 @@ var arr2 = [2, 7, 3, 5, 8, 10, 13]
 // return numbers that are not odd
 // console log the odd numbers
 
-let onlyOdds = arr2.filter(value => {
+const onlyOdds = arr2.filter(value => {
   return value % 2 !== 0
 })
 
@@ -54,7 +54,7 @@ var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 // returned newString w/ the use of .join method to get rid of spaces
 // logged the function w/ the given variable
 
-let findString = (array) => {
+const findString = (array) => {
   let newString = array.filter(value => {
     return typeof value === "string"
   })
@@ -71,7 +71,8 @@ var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 //create a function
 // takes an array as parameters
 // use .filter method to filter out false, null, 0, and empty strings
-// return number, string, and true
+//return the new variable that includes number, string, and true
+// log by calling onto the function name along with the variable provided
 
 const wordsNum = (array) => {
   let newWords = array.filter(value => {
@@ -107,9 +108,28 @@ const noVowels = (strings) => {
 }
 console.log(noVowels(str))
 
- 
+
 
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
-// var arr1 = [3, 7, 10, 5, 4, 3]
-// var arr2 = [7, 8, 2, 1, 5, 4]
+var arr1 = [3, 7, 10, 5, 4, 3]
+var arr2 = [7, 8, 2, 1, 5, 4]
 // // --> [3, 7, 10, 5, 4, 8, 2, 1]
+
+//PSEUDO CODE
+// create a function
+// must take in 2 arrays as parameters
+// create new variable to store new values once arrays are merged together
+// use .concat method on the 2 variables provided and store in the new variable created
+// use .filter method that takes in a value and index, ?????
+// ?????
+// return new variable
+// log the function along with the 2 variables as arguments
+
+const twoArrays = (array1, array2) => {
+  let bothArrays = arr1.concat(arr2)
+  let singleArray = bothArrays.filter((value, index) => {
+    return bothArrays.indexOf(value) === index
+  })
+  return singleArray
+}
+console.log(twoArrays(arr1,arr2))
