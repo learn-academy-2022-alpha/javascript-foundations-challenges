@@ -10,7 +10,8 @@ let multiplyByTen = (arr) => {
 }
 console.log(multiplyByTen(arr1))
 
-// Challenge #2 Write a function that takes in an array of numbers and returns a new array with only odd numbers. filter
+
+// Challenge #2 Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 var arr2 = [2, 7, 3, 5, 8, 10, 13]
 // --> [7, 3, 5, 13]
 
@@ -19,6 +20,7 @@ const onlyOdd = (array) => {
 }
 
 console.log(onlyOdd(arr2))
+
 
 // Challenge #3 Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT:
 var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
@@ -46,6 +48,7 @@ let notIncluded = (arr) => {
 }
 console.log(notIncluded(filterArrayValues))
 
+
 // STRETCH Challenges
 //#1 Create a function that takes in a string and returns a new string with all the vowels removed.
 var str = "javascript is awesome"
@@ -62,16 +65,21 @@ console.log(noVowels(str).join(''))
 
 
 //#2 Create a function that takes in two arrays as arguments returns one array with no duplicate values.
-var arr1 = [3, 7, 10, 5, 4, 3]
-var arr2 = [7, 8, 2, 1, 5, 4]
-// --> [3, 7, 10, 5, 4, 8, 2, 1]
+// Create a function that takes in two arrays and returns one array with no duplicate values.
+var arr1 = [3, 7, 10, 5, 4, 3, 3]
+var arr2 = [7, 8, 2, 3, 1, 5, 4]
+//--> [3, 7, 10, 5, 4, 8, 2, 1]
 
-const noDuplicates = (value1, value2) => {
-    let concatArray = value1.concat(value2)
-    let filterArray = concatArray.filter((value, index) => {
-        return concatArray.indexOf(value) === index
-    })
-    return filterArray
+const noDuplicates = (values1, values2) => {
+    let newArray = []
+    let combinedArray = values1.concat(values2)
+    for(i = 0; i < combinedArray.length; i++) {
+        if(newArray.indexOf(combinedArray[i]) === -1) {
+            newArray.push(combinedArray[i])
+
+        }
+    }
+    return newArray
 }
 console.log(noDuplicates(arr1, arr2))
 
