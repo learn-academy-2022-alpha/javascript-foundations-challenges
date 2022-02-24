@@ -1,12 +1,30 @@
 // Write the test for a function that returns "drink coffee" if you are tired and "keep working" if you are not tired.
-//pseudo code
+//pseudo code:
 //write a function getEnergized
 //write a conditional that checks if you are tired - returns "drink coffee"
 //If you are not tired "keep working"
 
+describe("getEnergized", () => {
+  it("returns a string that says drink coffee",() => {
+    expect(getEnergized("yes")).toEqual("drink coffee")
+    expect(getEnergized("no")).toEqual("keep working")
+  })
+})
 
 // Write the function that will make the test pass.
+//pseudo code:
+//write a function getEnergized
+//write a conditional that checks if you are tired - returns "drink coffee"
+//If you are not tired "keep working"
 
+const getEnergized = (value) => {
+  if(value === "yes"){
+    return "drink coffee"
+  }
+  else{
+    return "keep working"
+  }
+}
 
 // Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
 
