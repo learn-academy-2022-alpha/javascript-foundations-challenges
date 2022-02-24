@@ -16,24 +16,54 @@
 // }
 
 // Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
-describe("areYouStressed", () => {
-  it("returns relax or keep going depending on input", () => {
-    expect(areYouStressed("yes")).toEqual("relax")
-          expect(areYouStressed("no")).toEqual("keep going")
-
-const areYouStressed= (string) => {
-  if(string==="yes") {
-    return "relax"
-  } else {
-    return "keep going"
-  }
-}
+// describe("areYouStressed", () => {
+//   it("returns relax or keep going depending on input", () => {
+//     expect(areYouStressed("yes")).toEqual("relax")
+//           expect(areYouStressed("no")).toEqual("keep going")
+//
+// const areYouStressed= (string) => {
+//   if(string==="yes") {
+//     return "relax"
+//   } else {
+//     return "keep going"
+//   }
+// }
 // Write the function that will make the test pass.
 // Write the test for a function that returns "in budget" if a price is lower than $300.
-// Write the function that will make the test pass.
+
+// describe("inBudget", () => {
+//   it("returns in budget if price is less than 300 and out of budget if above", () => {
+//     expect(inBudget(299)).toEqual("In budget")
+//     expect(inBudget(301)).toEqual("Out of budget")
+//   })
+// })
+// // Write the function that will make the test pass.
+// const inBudget = (num) => {
+//   if(num < 300) {
+//     return "In budget"
+//   } else {
+//     return "Out of budget"
+//   }
+// }
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+describe("smallNum", () => {
+  var num3 = 5
+  var num4 = 10
+  it("returns the smaller number of two arguments", () => {
+    expect(smallNum(num3, num4)).toEqual(num3)
+    expect(smallNum(2, 6)).toEqual(2)
+  })
+})
 // Write the function that will make the test pass.
+const smallNum = (num1, num2) => {
+  if (num1 > num2) {
+    return num2
+  } else {
+    return num1
+  }
+}
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
+
 // Write the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Write the function that will make the test pass.
@@ -49,4 +79,4 @@ const areYouStressed= (string) => {
 // Write the function that will make the test pass.
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 // Write the function that will make the test pass.
-// Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
+// Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'
