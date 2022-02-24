@@ -25,16 +25,16 @@
 //
 // console.log(person.getData())
 
-// Consider this variable:
-var product = {
-  name: "chair", price: 14.99
-}
-// Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
-
-const describeProduct = (product) => {
-  return `The product is a ${product.name}. It costs $${product.price}.`
-}
-console.log(describeProduct(product))
+// // Consider this variable:
+// var product = {
+//   name: "chair", price: 14.99
+// }
+// // Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
+//
+// const describeProduct = (product) => {
+//   return `The product is a ${product.name}. It costs $${product.price}.`
+// }
+// console.log(describeProduct(product))
 
 
 
@@ -47,8 +47,19 @@ console.log(describeProduct(product))
 //   ingredients: ["bread", "peanut butter", "banana"]
 // }
 // Write the code that accesses the ingredients property.
-// Write the code that access the 3rd ingredient of the lunch object.
+// console.log(lunch.ingredients)
+// // Write the code that access the 3rd ingredient of the lunch object.
+// console.log(lunch.ingredients[2])
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+var lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"],
+  getData: function (){
+    return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients[0]}, ${this.ingredients[1]}, and ${this.ingredients[2]}.`
+  }
+}
+console.log(lunch.getData())
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
 
