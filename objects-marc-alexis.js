@@ -81,3 +81,55 @@ const catName = (array) => {
     })
 }
 console.log(catName(animals));
+
+
+// Consider this variable:
+let author = {
+    name: "H. G. Wells",
+    genre: "science fiction"
+
+}
+
+// Write the code that destructures the author object and makes the following work:
+let {name} = author
+let {genre} = author
+
+
+console.log(`${name} is a ${genre} author`)
+// --> "H. G. Wells is a science fiction author"
+
+
+
+// Consider this variable:
+// let pokeOne = {
+//     species: "Charmandar",
+//     pokemon_type: "Fire"
+// }
+
+// let pokeTwo = {
+//     species: "Magikarp",
+//     pokemon_type: "Water"
+// }
+// Write a function called describePokemon() that take an object like the ones above and uses destructuring to return a description of the Pokemon such that:
+// console.log(describePokemon(pokeOne))
+// --> "Charmandar is a Fire pokemon"
+// console.log(describePokemon(pokeTwo))
+// --> "Magikarp is a Water pokemon"
+
+let pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire"
+}
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water"
+}
+// Write a function called describePokemon() that take an object like the ones above and uses destructuring to return a description of the Pokemon such that:
+const describePokemon = (obj) => {
+    let {species, pokemon_type} = obj
+    return `${species} is a ${pokemon_type} pokemon`
+}
+console.log(describePokemon(pokeOne))
+// --> "Charmandar is a Fire pokemon"
+console.log(describePokemon(pokeTwo))
+// --> "Magikarp is a Water pokemon"
