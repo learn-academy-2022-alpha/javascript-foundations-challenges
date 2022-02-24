@@ -35,9 +35,12 @@
 
 // Consider this variable:
 var lunch = {
- name: "PB and Banana",
-   type: "sandwich",
-  ingredients: ["bread", "peanut butter", "banana"]
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"],
+  getData: function () {
+    return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients[0]}, ${this.ingredients[1]} and ${this.ingredients[2]}`
+  }
 }
 
 // Write the code that accesses the ingredients property.
@@ -46,42 +49,63 @@ var lunch = {
 // console.log(lunch.ingredients[2])
 
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-const recipe= item => {
-  const ingredients= item.ingredients
-  return `The ingredients for a ${item.name} ${item.type} are ${ingredients[0]}, ${ingredients[1]}, ${ingredients[2]}.`
-}
+// const recipe= item => {
+//   const ingredients= item.ingredients
+//   return `The ingredients for a ${item.name} ${item.type} are ${ingredients[0]}, ${ingredients[1]}, ${ingredients[2]}.`
+// }
 
-console.log(recipe(lunch))
+// console.log(recipe(lunch))
 
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
+console.log(lunch.getData())
+
 // Consider this variable:
-// var animals = [
-//   { name: "Waffles", type: "dog", age: 12 },
-//   { name: "Fluffy", type: "cat", age: 14 },
-//   { name: "Spelunky", type: "dog", age: 4 },
-//   { name: "Hank", type: "cat", age: 11 },
-// ]
+
+var animals = [
+  { name: "Waffles", type: "dog", age: 12 },
+  { name: "Fluffy", type: "cat", age: 14 },
+  { name: "Spelunky", type: "dog", age: 4 },
+  { name: "Hank", type: "cat", age: 11 },
+]
 // Create a function that takes in any array of objects and returns a new array with only those of type cat.
+
+// const catsOnly = array => array.filter(value => value.type === "cat")
+
+// console.log(catsOnly(animals))
+
 // Using the same array of objects above. Create a function that returns a new array with only the names of the animals.
+
+// const animalNames = array => array.map(value => value.name)
+
+// console.log(animalNames(animals))
+
 // Consider this variable:
-// let author = {
-//     name: "H. G. Wells",
-//     genre: "science fiction"
-// }
+let author = {
+    name: "H. G. Wells",
+    genre: "science fiction"
+}
 // Write the code that destructures the author object and makes the following work:
+
+// const {name, genre} = author
+
 // console.log(`${name} is a ${genre} author`)
+
 // --> "H. G. Wells is a science fiction author"
 // Consider this variable:
-// let pokeOne = {
-//     species: "Charmandar",
-//     pokemon_type: "Fire"
-// }
-//
-// let pokeTwo = {
-//     species: "Magikarp",
-//     pokemon_type: "Water"
-// }
+let pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire"
+}
+
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water"
+}
 // Write a function called describePokemon() that take an object like the ones above and uses destructuring to return a description of the Pokemon such that:
+
+const describePokemon = obj => `${obj.species} is a ${obj.pokemon_type} pokemon`
+
 // console.log(describePokemon(pokeOne))
 // --> "Charmandar is a Fire pokemon"
 // console.log(describePokemon(pokeTwo))
