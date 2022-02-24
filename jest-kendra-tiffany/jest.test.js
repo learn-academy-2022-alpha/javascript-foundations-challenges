@@ -130,7 +130,7 @@ const fruitColors = (fruit) => {
 
 describe("rick", () => {
     it("returns the string morty", () =>{
-        expect(rick().toEqual("morty"))
+        expect(rick()).toEqual("morty")
     })
 })
 
@@ -142,25 +142,53 @@ const rick = () => {
 
 
 
-// Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+// Write the test for a function called greeter that takes a name as an 
+
+describe("greeter", () => {
+    var nameIs = "Kendra"
+    it("returns a string that says Hello Kendra", () => {
+        expect(greeter(nameIs)).toEqual("Hello Kendra")
+    })
+})
 // Write the function that will make the test pass.
-
-
+const greeter = (name1) => {
+    return "Hello " + name1
+}
 
 
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+describe("oddOrEven", () => {
+    var number1 = 83
+    it("returns whether the number is an odd or even", () => {
+        expect(oddOrEven(number1)).toEqual("odd")
+    })
+})
 // Write the function that will make the test pass.
-
+const oddOrEven = (num) => {
+    if(num % 2 === 0) {
+        return "even"
+    } else {
+        return "odd"
+    }
+}
 
 
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+describe("doubler", () => {
+    var numToMult = 50
+    it("returns a number that has been multiplied by two", () => {
+        expect(doubler(numToMult)).toEqual(100)
+    })
+})
+
 // Write the function that will make the test pass.
-
-
+const doubler = (doubleNum) => {
+    return doubleNum * 2
+}
 
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
-// Write the function that will make the test pass.
 
+// Write the function that will make the test pass.
 
 
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
