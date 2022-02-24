@@ -32,9 +32,9 @@
 // console.log(person.homePlanet())
 
 // Consider this variable:
-var product = {
-    name: "chair", price: 14.99
-}
+// var product = {
+//     name: "chair", price: 14.99
+// }
 
 // Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
 
@@ -46,11 +46,11 @@ var product = {
 // console.log(product.describeProduct())
 
 // Consider this variable:
-var lunch = {
-    name: "PB and Banana",
-    type: "sandwich",
-    ingredients: ["bread", "peanut butter", "banana"]
-}
+// var lunch = {
+//     name: "PB and Banana",
+//     type: "sandwich",
+//     ingredients: ["bread", "peanut butter", "banana"]
+// }
 
 // Write the code that accesses the ingredients property.
 
@@ -90,6 +90,13 @@ var lunch = {
 
 
 // Create a function that takes in any array of objects and returns a new array with only those of type cat.
+// const petType = (array) => {
+//   return array.map(value => {
+//     return value.type
+//   })
+// }
+// var typeCat = animals.filter(value => value.type === "cat")
+// console.log(typeCat)
 
 
 // Using the same array of objects above.Create a function that returns a new array with only the names of the animals.
@@ -104,29 +111,33 @@ var lunch = {
 
 // Write the code that destructures the author object and makes the following work:
 // console.log(`${name} is a ${genre} author`)
+// var { name, genre } = author
 
 
 // --> "H. G. Wells is a science fiction author"
 
 
 // Consider this variable:
-// let pokeOne = {
-//     species: "Charmandar",
-//     pokemon_type: "Fire"
-// }
+let pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire",
+    describePokemon: function(){
+      return `${this.species} is a ${this.pokemon_type} pokemon.`
+    }
+}
 
-// let pokeTwo = {
-//     species: "Magikarp",
-//     pokemon_type: "Water"
-// }
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water",
+    describePoke: function(){
+      return `${this.species} is a ${this.pokemon_type} pokemon.`
+    }
+}
 
 
 // Write a function called describePokemon() that take an object like the ones above and uses destructuring to return a description of the Pokemon such that:
-
-
-// console.log(describePokemon(pokeOne))
+ console.log(pokeOne.describePokemon())
 // --> "Charmandar is a Fire pokemon"
-
-
-// console.log(describePokemon(pokeTwo))
+ //
+ console.log(pokeTwo.describePoke())
 // --> "Magikarp is a Water pokemon"
