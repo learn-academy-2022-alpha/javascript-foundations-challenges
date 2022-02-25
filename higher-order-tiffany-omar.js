@@ -20,24 +20,32 @@
 // console.log(oddOnly(arr2))
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use typeof method
-var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+// var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 
 
-const onlyLetters= (array) => {
-  return array.filter(value => {
-    return typeof value=== "string" && typeof value !== "number"
-  })
-}
+// const onlyLetters= (array) => {
+//   return array.filter(value => {
+//     return typeof value=== "string" && typeof value !== "number"
+//   })
+// }
 
-console.log(onlyLetters(comboArr))
+// console.log(onlyLetters(comboArr).join(""))
 
 
 // // --> "nicework"
 
 
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
-// var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
+var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 // // --> [58, "abcd", true]
+var newArray = []
+const arrayToFilter = (array) => {
+  return array.filter(value => {
+    return  value !== 0 && value !== null && value !== false && value !== " "
+  })
+}
+console.log(arrayToFilter(filterArrayValues))
+
 
 
 // STRETCH Challenges
@@ -45,6 +53,17 @@ console.log(onlyLetters(comboArr))
 // Create a function that takes in a string and returns a new string with all the vowels removed.
 // var str = "javascript is awesome"
 // // --> "jvscrpt s wsm"
+var str = "javascript is awesome"
+// --> "jvscrpt s wsm"
+var convertArray = str.split("")
+const noVowels = (array) => {
+  return array.filter(value => {
+    return value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
+  })
+}
+console.log(noVowels(convertArray).join(""))
+
+
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 // var arr1 = [3, 7, 10, 5, 4, 3]
 // var arr2 = [7, 8, 2, 1, 5, 4]
