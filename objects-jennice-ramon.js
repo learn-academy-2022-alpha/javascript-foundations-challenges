@@ -39,11 +39,14 @@
 // console.log(describeProduct(product))
 
 // Consider this variable:
- //var lunch = {
- //  name: "PB and Banana",
-  // type: "sandwich",
-   //ingredients: ["bread", "peanut butter", "banana"]
-//}
+ var lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"],
+  sentence: function(){
+      return `The ingredients for a ${this.name} ${this.type} are ${this.ingredients[0]}, ${this.ingredients[1]}, and ${this.ingredients[2]}.`
+    }
+}
 
 // Write the code that accesses the ingredients property.
 //run console log that accesses the lunch object with . notation for the ingredients key values
@@ -57,18 +60,17 @@
 
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 //Create a function that takes lunch object and returns a string that says "the ingredients for a PB and banana sandwich are bread, peanut butter, and banana"
-//
-//const mealTime = (object) => {
-  //  return `The ingredients for a ${object.name} ${object.type} are $///////{object.ingredients[0]}, ${object.ingredients[1]}, and ${object.///////ingredients[2]}.`
- //}
+
+// const mealTime = (object) => {
+//    return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients[0]}, ${object.ingredients[1]}, and ${object.ingredients[2]}.`
+//  }
 //
 // console.log(mealTime(lunch))
 
+console.log(lunch.sentence())
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 
-//lunch.string = mealTime
-
- //console.log()
 
 // Consider this variable:
 //var animals = [
@@ -87,8 +89,8 @@
 // If not cat then ignores
 
 // const catsOnly = (array)=>{
-  
-//   return array.filter(value => value.type == "cat")  
+
+//   return array.filter(value => value.type == "cat")
 // }
 // console.log(catsOnly(animals))
 
@@ -110,7 +112,7 @@ let author = {
 //assign a variable for name and variable for genre
 //write the code that access the key value for name from object
 //write the code that access the key value for genre from object
-const name = author.name 
+const name = author.name
 const genre = author.genre
 
 //console.log(`${name} is a ${genre} author`)
