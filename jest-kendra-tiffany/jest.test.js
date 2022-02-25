@@ -217,9 +217,9 @@ const divisibleBy = (num8, num9) => {
 
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
 describe("fizzbuzz", () => {
-    var fizzArray = [3, 5, 15] 
+    var fizzArray = [3] 
     it("returns whether the number is a multiple of 3,5, or both and spitting out a string accordingly.", () => {
-        expect(fizzbuzz(fizzArray)).toEqual("string")
+        expect(fizzbuzz(fizzArray)).toEqual("fizz")
     })
 })
 
@@ -229,12 +229,12 @@ const fizzbuzz = (arr) => {
 for(let i=0; i < arr.length; i++) {
 if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
     return "fizzbuzz"
-  } else
-  if (arr[i] % 3 === 0) {
+  } else if (arr[i] % 3 === 0) {
      return "fizz"
-  } else
-  if (arr[i] % 5 === 0){
+  } else if (arr[i] % 5 === 0){
      return "buzz"
   } else {
      return arr[i] 
   }
+}
+}
