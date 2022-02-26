@@ -39,7 +39,7 @@ const lettersOnly = (array) => {
   }
    return newArr1
   }
-console.log(lettersOnly(comboArr)) 
+console.log(lettersOnly(comboArr).join()) 
 // // --> "nicework"
 
 
