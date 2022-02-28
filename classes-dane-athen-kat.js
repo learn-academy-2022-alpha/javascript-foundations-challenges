@@ -49,7 +49,7 @@ class Latte {
       return `A ${this.flavor}${this.noMilkType()} latte with a ${this.shots} shot.`
     }
     noMilkType(){
-    if(this.milk === "" || this.milk === " "){
+    if(this.milk.length < 1){
       return ""
     } else{
       return ` with ${this.milk} milk`
@@ -69,5 +69,23 @@ console.log(hazelLatte.latteProfile());
 
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
-
+class Cylinder {
+  constructor(radius, height){
+    this.radius = radius
+    this.height = height
+    this.pi = Math.PI
+  }
+  calculateVolume(){
+    const volume = this.pi*(this.radius**2)*this.height
+    return volume.toFixed(4)
+  }
+}
 // Write the code that creates three unique cylinder objects
+const cylinder1 = new Cylinder(2,5)
+console.log(cylinder1.calculateVolume())
+
+const cylinder2 = new Cylinder(3,6)
+console.log(cylinder2.calculateVolume())
+
+const cylinder3 = new Cylinder(5,10)
+console.log(cylinder3.calculateVolume())
