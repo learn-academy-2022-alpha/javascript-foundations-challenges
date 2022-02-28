@@ -110,5 +110,18 @@ console.log(hazLatte.latteProfile());
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 
+
+class Tub {
+  constructor(height,radius){
+    this.height = height
+    this.radius = radius
+    this.pie = 3.14
+  }
+volume () {
+  return this.height * 2 this.radius * this.pie
+}
+
+}
+
 // Write the code that creates three unique cylinder objects
 
