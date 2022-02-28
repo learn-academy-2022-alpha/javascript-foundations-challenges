@@ -45,13 +45,27 @@ class Latte {
         this.milk = milk
         this.shots = shots
     }
+    latteProfile(){
+      return `A ${this.flavor}${this.noMilkType()} latte with a ${this.shots} shot.`
+    }
+    noMilkType(){
+    if(this.milk === "" || this.milk === " "){
+      return ""
+    } else{
+      return ` with ${this.milk} milk`
+    }
+  }
 }
 
 // Write a method for your Latte class that outputs the latte's profile.
 
-// Write the code that makes a regular, single shot latte. Then, log the latte's profile.
 
+// Write the code that makes a regular, single shot latte. Then, log the latte's profile.
+ const singleLatte = new Latte("regular", "", "single")
+ console.log(singleLatte.latteProfile());
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
+const hazelLatte = new Latte("hazelnut", "almond", "double")
+console.log(hazelLatte.latteProfile());
 
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
