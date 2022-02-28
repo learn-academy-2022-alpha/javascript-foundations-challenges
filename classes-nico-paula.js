@@ -58,4 +58,17 @@ console.log(latte1.latteProfile());
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 //
+class Cylinder {
+  constructor(radius, height) {
+    this.radius = radius
+    this.height = height
+    this.pi = 3.14
+  }
+  cylinderProfile(){
+    return this.pi * this.radius** 2 * this.height
+  }
+}
+const cylinder = new Cylinder(3, 6)
+console.log (cylinder.cylinderProfile());
+
 // Write the code that creates three unique cylinder objects
