@@ -23,6 +23,9 @@ var product = {
 
 //   Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
 
+
+// console.log(`The product is a chair. It costs ${product.price}`)
+
 console.log(`The product is a chair. It costs ${product.price}`)
 
 var lunch = {
@@ -66,6 +69,60 @@ var animals = [
 //   Create a function that takes in any array of objects and returns a new array with only those of type cat.
 
 const onlyCats = (array) => {
+
+    return array.map(value => {
+        return value.type === "cat"
+    })
+}
+
+
+console.log(onlyCats(animals))
+// Using the same array of objects above. Create a function that returns a new array with only the names of the animals.
+
+const animalNames = (array) => {
+    return array.map(value => {
+        return value.name
+    })
+}
+
+
+console.log(animalNames(animals))
+
+
+let author = {
+    name: "H. G. Wells",
+    genre: "science fiction"
+}
+
+var {name, genre} = author
+
+console.log(`${name} is a ${genre} author`)
+
+// --> "H. G. Wells is a science fiction author"
+
+let pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire"
+}
+
+let pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water"
+}
+
+const describePokemon = (type)=>{
+    var {species, pokemon_type} = type (value => {
+        return `${species} is a ${pokemon_type} pokemon`
+    })
+}
+
+
+
+console.log(describePokemon(pokeOne))
+// --> "Charmandar is a Fire pokemon"
+console.log(describePokemon(pokeTwo))
+// --> "Magikarp is a Water pokemon"
+
     return array.map(value =>{
         return value.type(cat)
     })
@@ -73,3 +130,4 @@ const onlyCats = (array) => {
 
 console.log(onlyCats(animals))
 // Using the same array of objects above. Create a function that returns a new array with only the names of the animals.
+
