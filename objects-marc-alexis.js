@@ -134,4 +134,4 @@ console.log(describePokemon(pokeOne))
 console.log(describePokemon(pokeTwo))
 // --> "Magikarp is a Water pokemon"
 
-// completed
+// completed challenge
