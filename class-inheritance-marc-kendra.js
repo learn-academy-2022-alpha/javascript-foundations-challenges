@@ -16,19 +16,11 @@ class Car {
     //   return this.lights = false
     // }
     this.lightsOn = !this.lightsOn
-    if (!this.lightsOn){
-      return "On"
-    } else {
-      return "Off"
-    }
+  
   }
   turnSignal() {
   this.turnSignalOn = !this.turnSignalOn
-    if (!this.turnSignalOn){
-      return "On"
-    } else {
-      return "Off"
-    }
+    
   }
   acceleration(acc) {
   this.speed += acc
@@ -42,8 +34,8 @@ class Car {
     Model: ${this.model}
     Year: ${this.year}
     Wheels: ${this.wheels}
-    Lights: ${this.lightSwitch()} 
-    Signal: ${this.turnSignal()} 
+    Lights: ${this.lightsOn} 
+    Signal: ${this.turnSignalOn} 
     Speed: ${this.speed}`
   }
 }
