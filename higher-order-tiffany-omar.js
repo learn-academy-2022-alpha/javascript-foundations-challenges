@@ -1,3 +1,4 @@
+
 // Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt. Use .map() or .filter() to complete all of the following exercises.
 // Don't forget to pseudo code.
 
