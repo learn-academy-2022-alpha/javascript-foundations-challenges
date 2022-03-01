@@ -53,4 +53,4 @@
 // As a user, I can see if my guess is too high or too low.
 // As a user, if I guess the "answer" correctly I am notified that I won.
 // As a user, I can continue to guess the "answer" until I am correct.
-// STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.
+// STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.......
