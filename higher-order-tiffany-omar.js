@@ -24,13 +24,7 @@
 // var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 
 
-// const onlyLetters= (array) => {
-//   return array.filter(value => {
-//     return typeof value=== "string" && typeof value !== "number"
-//   })
-// }
 
-// console.log(onlyLetters(comboArr).join(""))
 
 
 // // --> "nicework"
@@ -52,17 +46,6 @@
 // STRETCH Challenges
 
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-// var str = "javascript is awesome"
-// // --> "jvscrpt s wsm"
-// var str = "javascript is awesome"
-// // --> "jvscrpt s wsm"
-// var convertArray = str.split("")
-// const noVowels = (array) => {
-//   return array.filter(value => {
-//     return value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
-//   })
-// }
-// console.log(noVowels(convertArray).join(""))
 
 
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
