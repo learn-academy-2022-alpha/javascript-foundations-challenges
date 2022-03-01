@@ -16,18 +16,29 @@ class Car {
     //   return this.lights = false
     // }
     this.lightsOn = !this.lightsOn
+    if (!this.lightsOn){
+      return "On"
+    } else {
+      return "Off"
+    }
   }
   turnSignal() {
   this.turnSignalOn = !this.turnSignalOn
+    if (!this.turnSignalOn){
+      return "On"
+    } else {
+      return "Off"
+    }
   }
   acceleration(acc) {
   this.speed += acc
+
   }
   brake(decelerate) {
   this.speed -= decelerate
   }
-  carInfo(car) {
-    return
+  carInfo() {
+    return `Model: ${this.model}, Year: ${this.year}, Wheels: ${this.wheels}, Lights: ${this.lightSwitch()}, Signal: ${this.turnSignal()}, Speed: ${this.speed}`
   }
 }
 var myCar = new Car("generic car", 2018)
@@ -48,8 +59,25 @@ class Volkswagen extends Car {
   }
 }
 var myTesla = new Tesla("Model Y", 2021)
-// console.log(myTesla.acceleration())
-console.log(myTesla.carInfo())
+myTesla.lightSwitch()
+myTesla.turnSignal()
+myTesla.acceleration(10)
+myTesla.brake(7)
+console.log(myTesla.carInfo());
+
+var myToyota = new Toyota("Accord", 2018)
+myToyota.lightSwitch()
+myToyota.turnSignal()
+myToyota.acceleration(5)
+myToyota.brake(2)
+console.log(myToyota.carInfo());
+
+var myVolkswagon = new Volkswagen("Jetta", 1995)
+myVolkswagon.lightSwitch()
+myVolkswagon.turnSignal()
+myVolkswagon.acceleration(7)
+myVolkswagon.brake(5)
+console.log(myVolkswagon.carInfo());
 // Write a variable called myCar which is an instance of the class Car
 // Story: As a programmer, I can give my car a model on initialization.
 // The model for the car class can be "generic car"
