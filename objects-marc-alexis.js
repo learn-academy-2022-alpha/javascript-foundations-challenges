@@ -133,3 +133,5 @@ console.log(describePokemon(pokeOne))
 // --> "Charmandar is a Fire pokemon"
 console.log(describePokemon(pokeTwo))
 // --> "Magikarp is a Water pokemon"
+
+// completed
