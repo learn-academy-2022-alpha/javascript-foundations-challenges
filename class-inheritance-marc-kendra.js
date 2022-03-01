@@ -38,7 +38,13 @@ class Car {
   this.speed -= decelerate
   }
   carInfo() {
-    return `Model: ${this.model}, Year: ${this.year}, Wheels: ${this.wheels}, Lights: ${this.lightSwitch()}, Signal: ${this.turnSignal()}, Speed: ${this.speed}`
+    return `
+    Model: ${this.model}
+    Year: ${this.year}
+    Wheels: ${this.wheels}
+    Lights: ${this.lightSwitch()} 
+    Signal: ${this.turnSignal()} 
+    Speed: ${this.speed}`
   }
 }
 var myCar = new Car("generic car", 2018)
