@@ -97,6 +97,7 @@
 // Write the function that will make the test pass.
 
 
+
 // describe("oddNumber", () => {
 //         it("returns if a number is odd",() => { 
 //         expect(oddNumber(true)).toEqual(expect.any(Boolean))
@@ -115,3 +116,19 @@
 
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
 // Write the function that will make the test pass.
+
+describe("oddNumber", () => {
+        it("returns if a number is odd",() => { 
+        expect(oddNumber(true)).toEqual(expect.any(Boolean))
+    } )
+    })
+
+let numbers = 3
+const oddNumber = (number) => {
+    if(numbers % 2 === 0){
+        return "true"
+    } else {
+        return "false"
+    }
+}
+
