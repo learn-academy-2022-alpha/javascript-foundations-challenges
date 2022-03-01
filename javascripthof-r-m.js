@@ -1,5 +1,7 @@
 // Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
 
+// const { string } = require("yargs")
+
 //pseudo code
 //create a function
 //map through the array
@@ -70,7 +72,26 @@ const filteredArray = (array) => {
     })
     return filtered
     }
-console.log(filteredArray(filterArrayValues))
+// console.log(filteredArray(filterArrayValues))
+
+
+// Create a function that takes in a string and returns a new string with all the vowels removed.
+var str = "javascript is awesome"
+
+const noVowels = (strings) => {
+    let arr = strings.split("")
+    var string = arr.filter(value => (
+      value !== "a" && value !== "e" && value !== "i" && value !== "o" && value !== "u"
+    ))
+      return string.join("")
+  }
+  console.log(noVowels(str))
+// --> "jvscrpt s wsm"
+// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+var arr1 = [3, 7, 10, 5, 4, 3]
+var arr2 = [7, 8, 2, 1, 5, 4]
+// --> [3, 7, 10, 5, 4, 8, 2, 1]
+
 
 
 
