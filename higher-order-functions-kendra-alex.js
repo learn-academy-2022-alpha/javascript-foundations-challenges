@@ -59,3 +59,5 @@ const dupArray = (array1, array2) => {
     return array3.filter((a, b) => (array3.indexOf(a) === b)) 
 }
 console.log(dupArray(arr1, arr2));
+
+// completed
